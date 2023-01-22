@@ -1,0 +1,24 @@
+
+ul {
+  color: green;
+  list-style: none;
+  padding: 0;
+  border: 1px solid black;
+  width: 200px;
+  line-height: 30px;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li:hover {
+  background-color: lightblue;
+  cursor: grab;
+}
+
+li.selected {
+  background-color: lightgreen;
+  cursor: grab;
+}

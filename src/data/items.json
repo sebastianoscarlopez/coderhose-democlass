@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "T-Shirt",
+    "image": "assets/t-shirt.png",
+    "price": "10.00",
+    "quantity": "1",
+    "description": "This is a description for T-Shirt"
+  },
+  {
+    "id": "2",
+    "name": "Pants",
+    "image": "assets/pants.png",
+    "price": "20.00",
+    "quantity": "2",
+    "description": "This is a description for pants"
+  },
+  {
+    "id": "3",
+    "name": "Dress",
+    "image": "assets/dress.png",
+    "price": "30.00",
+    "quantity": "3",
+    "description": "This is a description for dress"
+  }     
+]

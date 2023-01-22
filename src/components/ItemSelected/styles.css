@@ -1,0 +1,24 @@
+.item-selected {
+  color: green;
+  list-style: none;
+  padding: 0;
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  line-height: 30px;
+}
+.color_yellow {
+  filter: sepia(40%) invert(0) drop-shadow(8px 8px 8px gray) hue-rotate(0deg) saturate(700%);
+}
+.color_green {
+  filter: sepia(100%) invert(0) drop-shadow(8px 8px 8px gray) hue-rotate(60deg) saturate(800%);
+}
+.color_blue {
+  filter: sepia(100%) invert(1) drop-shadow(8px 8px 8px gray) hue-rotate(0deg) saturate(800%);
+}
+.color_red {
+  filter: sepia(100%) invert(1) drop-shadow(8px 8px 8px gray) hue-rotate(120deg) saturate(800%);
+}
+.color_black {
+  filter: invert(1) brightness(3) drop-shadow(8px 8px 8px gray);
+}

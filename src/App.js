@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import ItemsList from './components/ItemsList';
+import items from './data/items.json';
+import ItemSelected from './components/ItemSelected';
+import ColorOptions from './components/ColorOptions';
+
 import './App.css';
 
+const colors=['yellow', 'green', 'blue', 'red', 'white', 'black']
+
 function App() {
+  const [itemSelected, setItemSelected] = useState(items[0]);
+  const [selectedColor, setSelectedColor] = useState(colors[2]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ItemsList items={items} itemSelected={itemSelected} onSelectChange={setItemSelected}/>
+      <ItemSelected
+        itemSelected={itemSelected}
+        selectedColor={selectedColor}
+      />
+      <ColorOptions
+        colors={colors}
+        selectedColor={selectedColor}
+        onColorChange={setSelectedColor}
+      />
     </div>
   );
 }
