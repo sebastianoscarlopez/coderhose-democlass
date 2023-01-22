@@ -1,25 +1,29 @@
+import { useContext } from 'react';
+import { ClothesContext } from '../../context';
+
 import './styles.css';
 
-const ColorOption = ({ color, isSelected, onColorChange }) => {
-  console.log('ColorOption', color, isSelected, onColorChange);
+const ColorOption = ({ color }) => {
+  const { selectedColor, setSelectedColor } = useContext(ClothesContext);
+  const isSelected = color === selectedColor;
+
   return (
     <div
       className={`color-option ${isSelected ? 'selected' : ''}`}
       style={{ backgroundColor: color }}
-      onClick={() => onColorChange(color)}
+      onClick={() => setSelectedColor(color)}
     />
   );
 }
 
-const ColorOptions = ({ colors, selectedColor, onColorChange }) => {
+const ColorOptions = () => {
+  const { colors } = useContext(ClothesContext);
+
   return (
     <div className="color-options">
-      {colors.map((color, index) => (
+      {colors.map((color) => (
         <ColorOption
-          key={index}
           color={color}
-          isSelected={color === selectedColor}
-          onColorChange={onColorChange}
         />
       ))}
     </div>
